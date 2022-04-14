@@ -26,10 +26,10 @@ def main():
 
     try:
         for msg in data:
-            click(args.input_x, args.y)
+            click(args.input_x, args.y) # <--- Click on the message input field
             m = unidecode(msg.rstrip())
-            pg.write(m)
-            click(args.button_x, args.y)
+            pg.write(m) # <--- Write the message
+            click(args.button_x, args.y) # <--- Click on the send message button
             time.sleep(5) # <--- Change it to a lower number if you want to send messages faster
             print(m)
     finally:
